@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Form</title>
+    <title>Marketing Task Form</title>
 </head>
 <body>
-    <h2>Task Form</h2>
-    <form action="#" method="post">
-        <label for="taskTitle">Task Title:</label><br>
+    <h2>Marketing Task Form</h2>
+    <form action="/submit-marketing-task" method="POST">
+        <label for="taskTitle">Title of Task (REQUIRED):</label><br>
         <input type="text" id="taskTitle" name="taskTitle" required><br><br>
 
         <label for="uploadItem">Upload Item:</label><br>
@@ -16,23 +16,46 @@
 
         <label for="assetType">AWS MKTG: Asset Type (REQUIRED):</label><br>
         <select id="assetType" name="assetType" required>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="Video under 1 min">Video under 1 min</option>
+            <option value="Video over 1 min">Video over 1 min</option>
+            <option value="Story">Story</option>
+            <option value="Link">Link</option>
+            <option value="Carousel">Carousel</option>
+            <option value="Text">Text</option>
         </select><br><br>
 
         <label for="contentPillar">AWS MKTG: Content Pillar (REQUIRED):</label><br>
         <select id="contentPillar" name="contentPillar" required>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="Brand Marketing">Brand Marketing</option>
+            <option value="Global Campaigns">Global Campaigns</option>
+            <option value="Global Events">Global Events</option>
+            <option value="Product Marketing">Product Marketing</option>
+            <option value="Strategic Communications">Strategic Communications</option>
         </select><br><br>
 
         <label for="contentOrganization">AWS MKTG: Content Organization (REQUIRED):</label><br>
         <select id="contentOrganization" name="contentOrganization" required>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
+            <option value="Analyst Relations">Analyst Relations</option>
+    <option value="Brand Advertising">Brand Advertising</option>
+    <option value="Brand Video">Brand Video</option>
+    <option value="Community Management">Community Management</option>
+    <option value="Customer Support">Customer Support</option>
+    <option value="Developer Relations">Developer Relations</option>
+    <option value="Employer Branding">Employer Branding</option>
+    <option value="Events Marketing">Events Marketing</option>
+    <option value="Executive Marketing">Executive Marketing</option>
+    <option value="Field Marketing">Field Marketing</option>
+    <option value="GCRP">GCRP</option>
+    <option value="Global Campaigns">Global Campaigns</option>
+    <option value="Industry Marketing">Industry Marketing</option>
+    <option value="Partner Marketing">Partner Marketing</option>
+    <option value="Product Marketing">Product Marketing</option>
+    <option value="Public Relations">Public Relations</option>
+    <option value="Public Sector">Public Sector</option>
+    <option value="Sports Marketing">Sports Marketing</option>
+    <option value="Startup Marketing">Startup Marketing</option>
+    <option value="Thought Leadership">Thought Leadership</option>
+    <option value="Training & Certification">Training & Certification</option>
         </select><br><br>
 
         <label for="primaryCampaign">AWS MKTG: Primary Campaign (REQUIRED):</label><br>
@@ -40,6 +63,27 @@
 
         <label for="gsmtMember">AWS MKTG: GSMT Member (REQUIRED):</label><br>
         <input type="text" id="gsmtMember" name="gsmtMember" required><br><br>
+
+        <label for="boostingNeeded">AWS MKTG: Boosting Needed (REQUIRED):</label><br>
+        <select id="boostingNeeded" name="boostingNeeded" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+
+        <label for="boostingStartDate">AWS MKTG: Boosting Start Date (REQUIRED):</label><br>
+        <input type="date" id="boostingStartDate" name="boostingStartDate" required><br><br>
+
+        <label for="boostingEndDate">AWS MKTG: Boosting End Date (REQUIRED):</label><br>
+        <input type="date" id="boostingEndDate" name="boostingEndDate" required><br><br>
+
+        <label for="boostingLifetimeBudget">AWS MKTG: Boosting Lifetime Budget:</label><br>
+        <input type="number" id="boostingLifetimeBudget" name="boostingLifetimeBudget"><br><br>
+
+        <label for="strategyGroup">AWS MKTG: Strategy Group:</label><br>
+        <input type="text" id="strategyGroup" name="strategyGroup"><br><br>
+
+        <label for="targetAudience">AWS MKTG: Target Audience:</label><br>
+        <input type="text" id="targetAudience" name="targetAudience"><br><br>
 
         <input type="submit" value="Submit">
     </form>
