@@ -13,14 +13,18 @@
    <div class="container">
         <h2>Marketing Task Form</h2>
         <form action="/submit-marketing-task" method="POST">
-        <label for="taskTitle">Title of Task (REQUIRED):</label><br>
-        <input type="text" id="taskTitle" name="taskTitle" required><br><br>
-
-        <label for="uploadItem">Upload Item:</label><br>
-        <input type="file" id="uploadItem" name="uploadItem"><br><br>
-
-        <label for="assetType">AWS MKTG: Asset Type (REQUIRED):</label><br>
-        <select id="assetType" name="assetType" required>
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Task Description</label>
+                <input type="text" class="form-control" id="taskDescription" name="taskDescription" required>
+            </div>
+            <div class="mb-3">
+                <label for="toWhom" class="form-label">To Whom (Email Address)</label>
+                <input type="email" class="form-control" id="toWhom" name="toWhom" required>
+            </div>
+            <div class="mb-3">
+                <label for="assetType" class="form-label">AWS MKTG: Asset Type (REQUIRED)</label>
+                <select class="form-select" id="assetType" name="assetType" required>
+                    <option value="">Select Asset Type</option>
             <option value="Video under 1 min">Video under 1 min</option>
             <option value="Video over 1 min">Video over 1 min</option>
             <option value="Story">Story</option>
@@ -28,19 +32,21 @@
             <option value="Carousel">Carousel</option>
             <option value="Text">Text</option>
         </select><br><br>
-
-        <label for="contentPillar">AWS MKTG: Content Pillar (REQUIRED):</label><br>
-        <select id="contentPillar" name="contentPillar" required>
+              </div>   
+ <div class="mb-3">
+        <label for="contentPillar" class="form-label">AWS MKTG: Content Pillar (REQUIRED)</label>
+                <select class="form-select" id="contentPillar" name="contentPillar" required>
             <option value="Brand Marketing">Brand Marketing</option>
             <option value="Global Campaigns">Global Campaigns</option>
             <option value="Global Events">Global Events</option>
             <option value="Product Marketing">Product Marketing</option>
             <option value="Strategic Communications">Strategic Communications</option>
         </select><br><br>
-
-        <label for="contentOrganization">AWS MKTG: Content Organization (REQUIRED):</label><br>
-        <select id="contentOrganization" name="contentOrganization" required>
-            <option value="Analyst Relations">Analyst Relations</option>
+              </div>   
+<div class="mb-3">
+                <label for="contentOrganization" class="form-label">AWS MKTG: Content Organization (REQUIRED)</label>
+                <select class="form-select" id="contentOrganization" name="contentOrganization" required>
+                    <option value="Analyst Relations">Analyst Relations</option>
     <option value="Brand Advertising">Brand Advertising</option>
     <option value="Brand Video">Brand Video</option>
     <option value="Community Management">Community Management</option>
@@ -62,36 +68,58 @@
     <option value="Thought Leadership">Thought Leadership</option>
     <option value="Training & Certification">Training & Certification</option>
         </select><br><br>
+              </div>   
 
-        <label for="primaryCampaign">AWS MKTG: Primary Campaign (REQUIRED):</label><br>
-        <input type="text" id="primaryCampaign" name="primaryCampaign" required><br><br>
+       <div class="mb-3">
+                <label for="primaryCampaign" class="form-label">AWS MKTG: Primary Campaign (REQUIRED)</label>
+                <input type="text" class="form-control" id="primaryCampaign" name="primaryCampaign" required>
+            </div>
+            <div class="mb-3">
+                <label for="gsmtMember" class="form-label">AWS MKTG: GSMT Member (REQUIRED)</label>
+                <input type="text" class="form-control" id="gsmtMember" name="gsmtMember" required>
+            </div>
 
-        <label for="gsmtMember">AWS MKTG: GSMT Member (REQUIRED):</label><br>
-        <input type="text" id="gsmtMember" name="gsmtMember" required><br><br>
+                        <div class="mb-3">
 
         <label for="boostingNeeded">AWS MKTG: Boosting Needed (REQUIRED):</label><br>
         <select id="boostingNeeded" name="boostingNeeded" required>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
         </select><br><br>
+            </div>
+
+                                        <div class="mb-3">
 
         <label for="boostingStartDate">AWS MKTG: Boosting Start Date (REQUIRED):</label><br>
         <input type="date" id="boostingStartDate" name="boostingStartDate" required><br><br>
+            </div>
+
+                                                        <div class="mb-3">
 
         <label for="boostingEndDate">AWS MKTG: Boosting End Date (REQUIRED):</label><br>
         <input type="date" id="boostingEndDate" name="boostingEndDate" required><br><br>
+            </div>
+
+                                                                        <div class="mb-3">
 
         <label for="boostingLifetimeBudget">AWS MKTG: Boosting Lifetime Budget:</label><br>
         <input type="number" id="boostingLifetimeBudget" name="boostingLifetimeBudget"><br><br>
+            </div>
+
+                                                                                        <div class="mb-3">
 
         <label for="strategyGroup">AWS MKTG: Strategy Group:</label><br>
         <input type="text" id="strategyGroup" name="strategyGroup"><br><br>
+            </div>
+
+                                                                                                        <div class="mb-3">
 
         <label for="targetAudience">AWS MKTG: Target Audience:</label><br>
         <input type="text" id="targetAudience" name="targetAudience"><br><br>
+            </div>
 
-        <input type="submit" value="Submit">
-    </form>
+<button type="submit" class="btn btn-primary">Submit</button>
+        </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
