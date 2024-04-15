@@ -18,11 +18,15 @@
                 <input type="text" class="form-control" id="taskDescription" name="taskDescription" required>
             </div>
             <div class="mb-3">
+                <label for="postingDate">Posting Date (REQUIRED)</label>
+                <input type="date" id="postingDate" name="postingDate" required>
+            </div>
+            <div class="mb-3">
                 <label for="toWhom" class="form-label">To Whom (Email Address)</label>
                 <input type="email" class="form-control" id="toWhom" name="toWhom" required>
             </div>
             <div class="mb-3">
-                <label for="assetType" class="form-label">AWS MKTG: Asset Type (REQUIRED)</label>
+                <label for="assetType" class="form-label">Asset Type to be Shared</label>
                 <select class="form-select" id="assetType" name="assetType" required>
                     <option value="">Select Asset Type</option>
                     <option value="Video under 1 min">Video under 1 min</option>
@@ -79,18 +83,18 @@
             </div>
             <div class="mb-3">
                 <label for="boostingNeeded">AWS MKTG: Boosting Needed (REQUIRED)</label>
-                <select id="boostingNeeded" name="boostingNeeded" required>
+                <select id="boostingNeeded" name="boostingNeeded" >
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
             </div>
             <div class="mb-3">
                 <label for="boostingStartDate">AWS MKTG: Boosting Start Date (REQUIRED)</label>
-                <input type="date" id="boostingStartDate" name="boostingStartDate" required>
+                <input type="date" id="boostingStartDate" name="boostingStartDate" >
             </div>
             <div class="mb-3">
                 <label for="boostingEndDate">AWS MKTG: Boosting End Date (REQUIRED)</label>
-                <input type="date" id="boostingEndDate" name="boostingEndDate" required>
+                <input type="date" id="boostingEndDate" name="boostingEndDate" >
             </div>
             <div class="mb-3">
                 <label for="boostingLifetimeBudget">AWS MKTG: Boosting Lifetime Budget</label>
