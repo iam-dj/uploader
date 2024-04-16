@@ -26,4 +26,7 @@ function sendFormDataByEmail(formData) {
     // For demonstration purposes, we'll just log the email body to the console
     console.log("Sending email to:", toWhom);
     console.log("Email body:\n", emailBody);
+    setTimeout(function() {
+        window.location.reload();
+    }, 3000); // 3000 milliseconds = 3 seconds
 }
