@@ -38,14 +38,15 @@ function sendFormDataByEmail(formData) {
     let emailBody = "Marketing Task Details:\n\n";
     for (let key in formData) {
         if (key==="platform"){
-            continue;
+            let selectedPlatforms = getSelectedPlatforms();
+            emailBody += `${key}: ${selectedPlatforms}\n`;
         }
         emailBody += `${key}: ${formData[key]}\n`;
     }
     
     // Get selected platforms
-    let selectedPlatforms = getSelectedPlatforms();
-    emailBody += `Platforms: ${selectedPlatforms}\n`;
+    //let selectedPlatforms = getSelectedPlatforms();
+    //emailBody += `Platforms: ${selectedPlatforms}\n`;
 
     // Compose mailto link
     let mailtoLink = `mailto:${toWhom}?subject=Marketing Task&body=${encodeURIComponent(emailBody)}`;
