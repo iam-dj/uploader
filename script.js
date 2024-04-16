@@ -12,6 +12,16 @@ document.getElementById("marketingTaskForm").addEventListener("submit", function
     sendFormDataByEmail(data);
 });
 
+document.getElementById("boostingNeeded").addEventListener("change", function() {
+    var boostingFields = document.getElementById("boostingFields");
+    if (this.value === "Yes") {
+        boostingFields.style.display = "block";
+    } else {
+        boostingFields.style.display = "none";
+    }
+});
+
+
 function sendFormDataByEmail(formData) {
     // Get the email address from the form
     let toWhom = formData["toWhom"];
