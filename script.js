@@ -40,6 +40,7 @@ function sendFormDataByEmail(formData) {
         if (key==="platform"){
             let selectedPlatforms = getSelectedPlatforms();
             emailBody += `${key}: ${selectedPlatforms}\n`;
+            continue;
         }
         emailBody += `${key}: ${formData[key]}\n`;
     }
