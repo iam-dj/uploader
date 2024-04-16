@@ -23,13 +23,14 @@ function sendFormDataByEmail(formData) {
     }
 
     // Compose mailto link
-    let outlookLink = `outlook:?to=${toWhom}&subject=Marketing Task&body=${encodeURIComponent(emailBody)}`;
+    let mailtoLink = `mailto:${toWhom}?subject=Marketing Task&body=${encodeURIComponent(emailBody)}`;
 
-    // Open Outlook with pre-filled email
-    window.location.href = outlookLink;
+    // Open default email client with pre-filled email
+    window.location.href = mailtoLink;
 
     // Optionally, you can reload the page after a delay
     setTimeout(function() {
         window.location.reload();
     }, 3000); // 3000 milliseconds = 3 seconds
 }
+
