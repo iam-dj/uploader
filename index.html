@@ -42,6 +42,35 @@
                 </select>
             </div>   
             <div class="mb-3">
+    <label class="form-label">Social Media Platforms</label>
+    <div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformFacebook" name="platform" value="Facebook">
+            <label class="form-check-label" for="platformFacebook">Facebook</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformTwitter" name="platform" value="Twitter">
+            <label class="form-check-label" for="platformTwitter">Twitter</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformInstagram" name="platform" value="Instagram">
+            <label class="form-check-label" for="platformInstagram">Instagram</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformLinkedIn" name="platform" value="LinkedIn">
+            <label class="form-check-label" for="platformInstagram">LinkedIn</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformTikTok" name="platform" value="TikTok">
+            <label class="form-check-label" for="platformTikTok">TikTok</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="platformThreads" name="platform" value="Threads">
+            <label class="form-check-label" for="platformThreads">Threads</label>
+        </div>
+    </div>
+</div>
+            <div class="mb-3">
                 <label for="contentPillar" class="form-label">AWS MKTG: Content Pillar (REQUIRED)</label>
                 <select class="form-select" id="contentPillar" name="contentPillar" required>
                     <option value="Brand Marketing">Brand Marketing</option>
@@ -86,32 +115,35 @@
                 <input type="text" class="form-control" id="gsmtMember" name="gsmtMember" required>
             </div>
             <div class="mb-3">
-                <label for="boostingNeeded">AWS MKTG: Boosting Needed (REQUIRED)</label>
-                <select id="boostingNeeded" name="boostingNeeded" >
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="boostingStartDate">AWS MKTG: Boosting Start Date (REQUIRED)</label>
-                <input type="date" id="boostingStartDate" name="boostingStartDate" >
-            </div>
-            <div class="mb-3">
-                <label for="boostingEndDate">AWS MKTG: Boosting End Date (REQUIRED)</label>
-                <input type="date" id="boostingEndDate" name="boostingEndDate" >
-            </div>
-            <div class="mb-3">
-                <label for="boostingLifetimeBudget">AWS MKTG: Boosting Lifetime Budget</label>
-                <input type="number" id="boostingLifetimeBudget" name="boostingLifetimeBudget">
-            </div>
-            <div class="mb-3">
-                <label for="strategyGroup">AWS MKTG: Strategy Group</label>
-                <input type="text" id="strategyGroup" name="strategyGroup">
-            </div>
-            <div class="mb-3">
-                <label for="targetAudience">AWS MKTG: Target Audience</label>
-                <input type="text" id="targetAudience" name="targetAudience">
-            </div>
+    <label for="boostingNeeded">AWS MKTG: Boosting Needed (REQUIRED)</label>
+    <select id="boostingNeeded" name="boostingNeeded">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+<div id="boostingFields" style="display: none;">
+    <div class="mb-3">
+        <label for="boostingStartDate">AWS MKTG: Boosting Start Date (REQUIRED)</label>
+        <input type="date" id="boostingStartDate" name="boostingStartDate">
+    </div>
+    <div class="mb-3">
+        <label for="boostingEndDate">AWS MKTG: Boosting End Date (REQUIRED)</label>
+        <input type="date" id="boostingEndDate" name="boostingEndDate">
+    </div>
+    <div class="mb-3">
+        <label for="boostingLifetimeBudget">AWS MKTG: Boosting Lifetime Budget</label>
+        <input type="number" id="boostingLifetimeBudget" name="boostingLifetimeBudget">
+    </div>
+    <div class="mb-3">
+        <label for="strategyGroup">AWS MKTG: Strategy Group</label>
+        <input type="text" id="strategyGroup" name="strategyGroup">
+    </div>
+    <div class="mb-3">
+        <label for="targetAudience">AWS MKTG: Target Audience</label>
+        <input type="text" id="targetAudience" name="targetAudience">
+    </div>
+</div>
+
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
