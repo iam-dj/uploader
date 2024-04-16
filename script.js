@@ -21,6 +21,14 @@ document.getElementById("boostingNeeded").addEventListener("change", function() 
     }
 });
 
+function getSelectedPlatforms() {
+    let selectedPlatforms = [];
+    document.querySelectorAll('input[name="platform"]:checked').forEach(function(checkbox) {
+        selectedPlatforms.push(checkbox.value);
+    });
+    return selectedPlatforms.join(", ");
+}
+
 
 function sendFormDataByEmail(formData) {
     // Get the email address from the form
@@ -31,6 +39,10 @@ function sendFormDataByEmail(formData) {
     for (let key in formData) {
         emailBody += `${key}: ${formData[key]}\n`;
     }
+    
+    // Get selected platforms
+    let selectedPlatforms = getSelectedPlatforms();
+    emailBody += `Platforms: ${selectedPlatforms}\n`;
 
     // Compose mailto link
     let mailtoLink = `mailto:${toWhom}?subject=Marketing Task&body=${encodeURIComponent(emailBody)}`;
@@ -43,4 +55,5 @@ function sendFormDataByEmail(formData) {
         window.location.reload();
     }, 3000); // 3000 milliseconds = 3 seconds
 }
+
 
