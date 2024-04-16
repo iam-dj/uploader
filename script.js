@@ -22,10 +22,13 @@ function sendFormDataByEmail(formData) {
         emailBody += `${key}: ${formData[key]}\n`;
     }
 
-    // Here you can implement your logic to send email using AJAX, fetch, or any other method
-    // For demonstration purposes, we'll just log the email body to the console
-    console.log("Sending email to:", toWhom);
-    console.log("Email body:\n", emailBody);
+    // Compose mailto link
+    let mailtoLink = `mailto:${toWhom}?subject=Marketing Task&body=${encodeURIComponent(emailBody)}`;
+
+    // Open default email client with pre-filled email
+    window.location.href = mailtoLink;
+
+    // Optionally, you can reload the page after a delay
     setTimeout(function() {
         window.location.reload();
     }, 3000); // 3000 milliseconds = 3 seconds
