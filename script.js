@@ -37,6 +37,9 @@ function sendFormDataByEmail(formData) {
     // Construct email body
     let emailBody = "Marketing Task Details:\n\n";
     for (let key in formData) {
+        if (key==="platform"){
+            continue;
+        }
         emailBody += `${key}: ${formData[key]}\n`;
     }
     
